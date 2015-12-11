@@ -333,6 +333,95 @@ a:focus {
 }
 
 
+/* =========== Style Propos.html ========== */
+#propos_hub {
+	background: #FCAC45;
+	margin-top: 60px;
+	margin-bottom: 60px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+#propos_hub h3 {
+	color:white;
+	margin-left: 18px;
+}
+
+.propos {
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+
+.propos p {
+	text-align: justify;
+}
+
+
+.propos img {
+    border-radius:0%;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* =========== Style Competences ========== */
+
+
+.tooltip-target { position: relative; }
+
+.tooltip-content { 
+     display: none; 
+     position: absolute;
+     left: 30%;
+     top: -20px; /* set this whatever you want */
+     height: 160px;
+     width: 60px;
+}
+
+.tooltip-target:hover .tooltip-content {
+    display: block;
+}
+
+
+
+/* =========== Informations========== */
+#f_Propos {
+    background: #384452;
+	padding-top: 70px;
+	padding-bottom: 70px;
+	text-align: center;
+}
+
+#f_Propos h3 {
+    color: white;
+	font-size: 22px;
+	font-weight: 450;
+}
+
+#f_Propos p {
+	font-size: 20px;
+	color: #f2f2f2;	
+}
+
+/* =========== Formations ========== */
+
+#formations img {
+    
+    text-align: center;
+    
+}
+
+
+/* =========== Formations ========== */
+
+#experiences img {
+    
+    text-align: center;
+    
+}
+
+
 
 /* ==========================================================================
    Helper classes
