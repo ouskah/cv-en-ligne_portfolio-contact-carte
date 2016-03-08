@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="">
     <head>
-     <meta charset="utf-8">
+        <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>ousk@ah - Freelance</title>
         <meta name="description" content="">
@@ -14,61 +14,16 @@
 		<link href="css/bootstrap.css" rel="stylesheet">
 		
 		<!-- Custom style -->
-		<link href="css/main.css" rel="stylesheet">
+		<link href="css/main2.css" rel="stylesheet">
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
 		
         <link rel="stylesheet" href="css/normalize.css">
+        <!-- <link rel="stylesheet" href="css/main.css"> -->
+    
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-		
-		
-		<!-- Portfolio : lien vers le fichier jquery pour l'effet "hover" -->  
-        <script type="text/javascript" src="js/jquery.easing.min.js"></script> 
         
-        <!-- Portfolio : lien vers fichier JQuery pour l'effet filtre-->
-        <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
-		
-		
-		<!-- Old Browser -->
-		<!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-  
         
-    <script type="text/javascript">
-    $(function () {
-        var filterList = {
-            init: function () {
-                // Plugin Mixitup, qui permet de filtrer les vignettes par catégorie
-                $('#portfoliolist').mixitup({
-                    targetSelector: '.portfolio',
-                    filterSelector: '.filter',
-                    effects: ['fade'],
-                    easing: 'snap',
-                    // call the hover effect
-                    onMixEnd: filterList.hoverEffect()
-                });
-            },
-            hoverEffect: function () {
-                // Fonction pour l'effet "hover"
-                $('#portfoliolist .portfolio').hover(
-                    function () {
-                        $(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
-                        $(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');
-                    },
-                    function () {
-                        $(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
-                        $(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');
-                    }
-                );
-            }
-        };
-        // Lance les deux fonctions "hover" et "filtre"
-        filterList.init();
-    });
-    </script>
-
-    
-    
+        
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -488,208 +443,250 @@
         <br/>
         
         
-        <div class="container">
-            
-        <h2> Mon Portfolio</h2>    
-            
-        <hr/>
-            <ul id="filters" class="clearfix row">
-                <li><span class = "filter active" data-filter="cat1 cat2 cat3 cat4"> Catégories</span></li>
-                <li><span class="filter" data-filter="cat1"> HTML/CSS</span></li>
-                <li><span class ="filter" data-filter="cat2">Javascript</span></li>
-                <li><span class="filter" data-filter="cat3">Bootstrap</span></li>
-                <li><span class="filter" data-filter="cat4">Ruby</span></li>
-            </ul>
-            
-            
-            <div id=portfoliolist> <!-- div qui contient les vignettes des projets -->
-                
-                <div class="portfolio cat2" data-cat="cat2">
-                    <div class="portfolio-wrapper">             
-                        <img src="img/portfolios/logo/5.jpg" alt="" />
-                        <div class="label">
-                            <div class="label-text">
-                                <a class="text-title">Annuaire</a>
-                                <span class="text-category">Javascript</span>
-                            </div>
-                            <div class="label-bg"></div>
-                        </div>
-                    </div>
-                </div>
-                
-                
-                <div class="portfolio cat1" data-cat="cat1">
-                    <div class="portfolio-wrapper">         
+        
+        
+        <!-- ============= PORTFOLIO ========================== -->
+        
+        <div class="container portfolio">    
+            <h2> Mon Portfolio</h2> 
+            <hr/>
+        
+        
+            <!-- éléments du filtre -->
+            <nav class="filter" id="filter" data-option-key="filter">
+                <a data-filter=".tous" class="current">Tous</a>
+                <a data-filter=".htmlcss">HTML/CSS</a>
+                <a data-filter=".javascript">Javascript</a>
+                <a data-filter=".bootstrap">Bootstrap</a>
+                <a data-filter=".ruby">Ruby</a>
+            </nav>
+        
+            <!-- définition des éléments des catégories -->
+               
+            <ul id="elements" class="grid">
+                <li class="tous htmlcss">
+                    <figure>
                         <img src="img/portfolios/app/1.jpg" alt="" />
-                        <div class="label">
-                            <div class="label-text">
-                                <a class="text-title">Titre de mon projet HTML/CSS</a>
-                                <span class="text-category">HTML/CSS</span>
-                            </div>
-                            <div class="label-bg"></div>
-                        </div>
-                    </div>
-                </div>
+                        <figcaption>
+                            <h3> Projet-1</h3>
+                            <span>HTML/CSS</span>
+                            <a href="img/portfolios/app/1.jpg">Voir plus</a>
+                        </figcaption>
+                    </figure>
+                </li>
                 
+                <li class="tous javascript">
+                    <figure>
+                        <img src="img/portfolios/logo/5.jpg" alt="" />
+                        <figcaption>
+                            <h3> Annuaire</h3>
+                            <span>Javascript</span>
+                            <a href="img/portfolios/logo/5.jpg">Voir plus</a>
+                        </figcaption>
+                    </figure>
+                </li>
                 
-                <div class="portfolio cat4" data-cat="cat4">
-                    <div class="portfolio-wrapper">         
+                <li class="tous ruby">
+                    <figure>
                         <img src="img/portfolios/card/1.jpg" alt="" />
-                        <div class="label">
-                            <div class="label-text">
-                                <a class="text-title">API Open Food Facts</a>
-                                <span class="text-category">Ruby</span>
-                            </div>
-                            <div class="label-bg"></div>
-                        </div>
-                    </div>
-                </div>
+                        <figcaption>
+                            <h3> API Open Food Facts</h3>
+                            <span>Ruby</span>
+                            <a href="img/portfolios/card/1.jpg">Voir plus</a>
+                        </figcaption>
+                    </figure>
+                </li>
                 
-                <div class="portfolio cat1" data-cat="cat1">
-                    <div class="portfolio-wrapper">         
+                <li class="tous htmlcss">
+                    <figure>
                         <img src="img/portfolios/app/2.jpg" alt="" />
-                        <div class="label">
-                            <div class="label-text">
-                                <a class="text-title">Page placement div</a>
-                                <span class="text-category">HTML/CSS</span>
-                            </div>
-                            <div class="label-bg"></div>
-                        </div>
-                    </div>
-                </div>  
+                        <figcaption>
+                            <h3> Page placement DIV</h3>
+                            <span>HTML/CSS</span>
+                            <a href="img/portfolios/app/2.jpg">Voir plus</a>
+                        </figcaption>
+                    </figure>
+                </li>
                 
-                 <div class="portfolio cat4" data-cat="cat4">
-                    <div class="portfolio-wrapper">         
+                <li class="tous ruby">
+                    <figure>
                         <img src="img/portfolios/card/2.jpg" alt="" />
-                        <div class="label">
-                            <div class="label-text">
-                                <a class="text-title">Exercice en Ruby</a>
-                                <span class="text-category">Ruby</span>
-                            </div>
-                            <div class="label-bg"></div>
-                        </div>
-                    </div>
-                </div> 
-                
-                <div class="portfolio cat3" data-cat="cat3">
-                    <div class="portfolio-wrapper">         
-                        <img src="img/portfolios/icon/1.jpg" alt="" />
-                        <div class="label">
-                            <div class="label-text">
-                                <a class="text-title">Exercice utilisation Bootstrap</a>
-                                <span class="text-category">Bootstrap</span>
-                            </div>
-                            <div class="label-bg"></div>
-                        </div>
-                    </div>
-                </div> 
-                
-                <div class="portfolio cat4" data-cat="cat4">
-                    <div class="portfolio-wrapper">         
-                        <img src="img/portfolios/card/3.png" alt="" />
-                        <div class="label">
-                            <div class="label-text">
-                                <a class="text-title">Titre de mon projet avec Ruby</a>
-                                <span class="text-category">Ruby</span>
-                            </div>
-                            <div class="label-bg"></div>
-                        </div>
-                    </div>
-                </div>    
-                
-                <div class="portfolio cat2" data-cat="cat2">
-                    <div class="portfolio-wrapper">         
-                        <img src="img/portfolios/logo/3.jpg" alt="" />
-                        <div class="label">
-                            <div class="label-text">
-                                <a class="text-title">Tic-Tac-Toe</a>
-                                <span class="text-category">Javascript</span>
-                            </div>
-                            <div class="label-bg"></div>
-                        </div>
-                    </div>
-                </div>  
-                
-                <div class="portfolio cat2" data-cat="cat2">
-                    <div class="portfolio-wrapper">         
-                        <img src="img/portfolios/logo/4.jpg" alt="" />
-                        <div class="label">
-                            <div class="label-text">
-                                <a class="text-title">Pierre-Feuille-Ciseau</a>
-                                <span class="text-category">Javascript</span>
-                            </div>
-                            <div class="label-bg"></div>
-                        </div>
-                    </div>
-                </div> 
-                
-                <div class="portfolio cat3" data-cat="cat3">
-                    <div class="portfolio-wrapper">         
-                        <img src="img/portfolios/icon/2.jpg" alt="" />
-                        <div class="label">
-                            <div class="label-text">
-                                <a class="text-title">Titre de mon projet Bootstrap</a>
-                                <span class="text-category">Bootstrap</span>
-                            </div>
-                            <div class="label-bg"></div>
-                        </div>
-                    </div>
-                </div>  
-                
-                <div class="portfolio cat2" data-cat="cat2">
-                    <div class="portfolio-wrapper">         
-                        <img src="img/portfolios/logo/2.jpg" alt="" />
-                        <div class="label">
-                            <div class="label-text">
-                                <a class="text-title">Cookie Clicker</a>
-                                <span class="text-category">Javascript</span>
-                            </div>
-                            <div class="label-bg"></div>
-                        </div>
-                    </div>
-                </div> 
-            </div> <!-- fin div id portfoliolist -->
-        </div> <!-- fin class container -->
-        
-        
-        
-        <br/>
-        
-        
-        
-        <!-- Contact -->
-        
-        
-        
-        <br/>
-        
-        
-        <!-- Footer -->
-        
-       <!--
-        <div class="footer text-center">
-           <div class="container">
-            <div class="row">
-             <div class="col-md-12">
-              <iframe src="https://www.google.com/maps/embed/v1/place?q=1+Liberty+Island+-+Ellis+Island,+New+York,+NY+10004&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU" width="50%" frameborder="0" style="border:0" allowfullscreen></iframe>
-        
-      
-        
-                <p>Mes coordonnées : 0600000000 / simplon@simplon.co</p>
-              
-              
-             </div>
-            </div>
-           </div>
-        </div>
+                        <figcaption>
+                            <h3> Exo en Ruby</h3>
+                            <span>Ruby</span>
+                            <a href="img/portfolios/card/2.jpg">Voir plus</a>
+                        </figcaption>
+                    </figure>
+                </li>
     
-        -->
+                <li class="tous bootstrap">
+                    <figure>
+                        <img src="img/portfolios/icon/1.jpg" alt="" />
+                        <figcaption>
+                            <h3> Exo Bootstrap</h3>
+                            <span>Bootstrap</span>
+                            <a href="img/portfolios/icon/1.jpg">Voir plus</a>
+                        </figcaption>
+                    </figure>
+                </li>
+                                
+                <li class="tous ruby">
+                    <figure>
+                        <img src="img/portfolios/card/3.png" alt="" />
+                        <figcaption>
+                            <h3> Projet en Ruby </h3>
+                            <span>Ruby</span>
+                            <a href="img/portfolios/card/3.png">Voir plus</a>
+                        </figcaption>
+                    </figure>
+                </li>
+                
+                <li class="tous javascript">
+                    <figure>
+                        <img src="img/portfolios/logo/3.jpg" alt="" />
+                        <figcaption>
+                            <h3> Tic-Tac-Toe </h3>
+                            <span>Javascript</span>
+                            <a href="img/portfolios/logo/3.jpg">Voir plus</a>
+                        </figcaption>
+                    </figure>
+                </li>
+                
+                <li class="tous javascript">
+                    <figure>
+                        <img src="img/portfolios/logo/4.jpg" alt="" />
+                        <figcaption>
+                            <h3> Pierre-Feuille-Ciseaux</h3>
+                            <span>Javascript</span>
+                            <a href="img/portfolios/logo/4.jpg">Voir plus</a>
+                        </figcaption>
+                    </figure>
+                </li>
+
+                <li class="tous bootstrap">
+                    <figure>
+                        <img src="img/portfolios/icon/2.jpg" alt="" />
+                        <figcaption>
+                            <h3> Projet en Bootstrap</h3>
+                            <span>Bootstrap</span>
+                            <a href="img/portfolios/icon/2.jpg">Voir plus</a>
+                        </figcaption>
+                    </figure>
+                </li>
+    
+                <li class="tous <javascript></javascript>">
+                    <figure>
+                        <img src="img/portfolios/logo/2.jpg" alt="" />
+                        <figcaption>
+                            <h3>Cookie Clicker</h3>
+                            <span>Javascript</span>
+                            <a href="img/portfolios/logo/2.jpg">Voir plus</a>
+                        </figcaption>
+                    </figure>
+                </li>    
+
+            </ul> <!-- elements -->
+        </div> <!-- div class container -->
+
         
+        <br/>
+        
+        
+        
+        <!-- ======================= CONTACT ========================== -->
+
+        <div id="contact">
+            <div class="container">
+    			<div class="row">
+    			    
+    			    <h2>Contact Me<h2>
+    				
+    				<hr/>
+    			    
+    				<div class="col-md-6">
+                        <h3>Get in touch, we can be friends</h3>
+					    <br /> 
+                        
+                        <form id="contact-form" action="/" method="post">
+                        <div>
+    						<label>
+        						<span>Could you tell us your name? (required)</span>
+        						<input placeholder="Please enter your name" type="text" tabindex="1" required>
+    						</label>
+						</div>
+						<div>
+    						<label>
+    							<span>And by the way, your email? (required)</span>
+    							<input placeholder="Please enter your email address" type="email" tabindex="2" required>
+    						</label>
+						</div>
+						<div>
+    						<label>
+								<span>No pressure, but what is your phone number?</span>
+								<input placeholder="Please enter your number" type="tel" tabindex="3">
+    						</label>
+						</div>
+						<div>
+    						<label>
+								<span>Do you have a website?</span>
+								<input placeholder="Begin with http://" type="url" tabindex="4">
+    						</label>
+						</div>
+						<div>
+    						<label>
+								<span>And what can we do for you? (required)</span>
+								<textarea placeholder="Include all the details you can" tabindex="5" required></textarea>
+    						</label>
+						</div>
+						<div>
+    						<button name="submit" type="submit" id="contact-submit">Send Email</button>
+						</div>
+					    </form>				
+				    </div> <!-- fin div col-md-6 -->
+                     
+                    <div class="col-md-6">
+                        <h3> Just over there</h3>
+                        <br />
+                        <br />
+                        
+                        <iframe src="https://www.google.com/maps/embed/v1/place?q=1+Liberty+Island+-+Ellis+Island,+New+York,+NY+10004&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU" width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" allowfullscreen></iframe>
+                       
+                    </div> <!-- fin div col-md-6 -->
+                    
+                    
+                </div> <!-- fin dic class row -->    
+                  
+            </div> <!-- div class container -->            
+         
+        </div> <!-- div id contact --> 
+        
+        <br/>
+        
+        <!-- ========================= FOOTER ========================== -->
+         <footer class="row" id="copyright">
+         
+             <span>&copy; 2015 Ousk@h. Tous droits réservés - <a href="#">Mentions légales</span> </p>
+             
+             <a target="_blank" href="#"><i class="fa fa-github"></i> </a>  
+             
+             <a target="_blank" href="#"><i class="fa fa-twitter"></i> </a>
+
+             <a target="_blank" href="#"><i class="fa fa-facebook"></i> </a>
+             
+             <a target="_blank" href="#"><i class="fa fa-linkedin"></i> </a>
+             
+             <a target="_blank" href="#"><i class="fa fa-google-plus"></i> </a>
+
+        </footer>
+
+  
+  
+      
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
-
+    
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -704,8 +701,15 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        
+        <!-- Isotope : Filtering http://isotope.metafizzy.co/demos/filtering.html -->
+	    <script src="js/jquery.isotope.min.js"></script>
+        
+        <script src="js/main2.js"></script>
+
 		<script src="js/bootstrap.js"></script>
+		
+		
             
     </body>
 </html>

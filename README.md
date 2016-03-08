@@ -1,26 +1,26 @@
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+### CV EN LIGNE  (REFONTE EN COURS)
+----------------
 
 
-Hi there! Welcome to Cloud9 IDE!
+#####TODO
 
-To get you started, we included a small hello world application.
-
-1) Open the hello-world.html file
-
-2) Click on the Preview button to open a live preview pane
-
-3) Make some changes to the file, save, watch the preview, and have fun!
-
-Happy coding!
-The Cloud9 IDE team
+- Nouveau template
+- Nouvelle identité visuelle
+- Réécriture des sections à
 
 
-## Support & Documentation
+##### Mission 
 
-Visit http://docs.c9.io for documentation, or http://support.c9.io for support.
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+~~~
+
+* Intégrer un portfolio Bootstrap et Jquery dans votre CV en ligne
+
+* Ajouter un formulaire de contact à votre CV en ligne
+
+* Ce formulaire devra comporter les champs :
+        - Nom et Prénom
+        - Adresse Email
+Il devra également être placé dans votrefooter, en bas de la carte GoogleMap et de vos coordonnées.
+~~~
+
+[cv-en-ligne]()
